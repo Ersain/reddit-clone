@@ -3,7 +3,7 @@
 {% block content%}
 <div class="card mb-4">
     <div class="card-header text-muted">
-        <a class="mr-2" href="{{ url_for('user.user', username=post.author) }}">{{ post.author }}</a>
+        <a class="mr-2" href="{{ url_for('user.user_api', username=post.author) }}">{{ post.author }}</a>
         Points: {{post.score}}
     </div>
 

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content%} 
+{% for post in posts %} 
+    {% if not post.stickied %}
+        <div class="card mb-4">
+            <div class="card-header">
+                <strong>
+                    <button class="btn btn-light btn-sm">
+                        <i class="fas fa-arrow-up"></i> 
+                    </button>
+                    {{ post['data']['ups'] }}
+                    <button class="btn btn-light btn-sm">
+                        <i class="fas fa-arrow-down"></i> 
+                    </button>
+                </strong>
+               
+                <span class="text-muted" style="font-size: 10pt;">
+                    <a class="mr-2" href="{{ url_for('user.user_api', username=post['data']['author']) }}">{{ post['data']['author'] }}</a>
+                </span>
+            </div>
+
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a class="article-title" href="{{ url_for('post.post', post_id=post['data']['id']) }}">{{ post['data']['title'] }}</a>
+                </h5>
+            </div>
+            <div class="card-footer text-muted">
+                <a href="{{ url_for('post.post', post_id=post['data']['id']) }}" class="btn btn-light btn-sm mr-1">
+                    <i class="fas fa-comment mr-1"></i>
+                    {{ post['data']['num_comments'] }}
+                </a>
+            </div>
+        </div>
+    {% endif %} 
+{% endfor %} 
+{% endblock content %}

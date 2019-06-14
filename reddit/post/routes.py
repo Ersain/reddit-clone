@@ -1,4 +1,5 @@
 from reddit import reddit
+from reddit.reddit_api import subreddit_request
 from reddit.utility import get_submission_comments
 from flask import render_template, Blueprint
 
@@ -14,9 +15,9 @@ def home():
 
 
 @post_bp.route("/r/<string:subreddit>")
-def subreddit_route(subreddit):
-    posts = reddit.subreddit(subreddit).hot(limit=15)
-    return render_template("home.html", posts=posts)
+def subreddit_route_api(subreddit):
+    posts = subreddit_request(subreddit)
+    return render_template("home_api.html", posts=posts['data']['children'])
 
 
 @post_bp.route('/post/<string:post_id>')

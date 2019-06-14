@@ -11,7 +11,7 @@ def search_for_subreddit():
     form = SearchForSubredditForm()
     if form.validate_on_submit():
         if sub_exists(form.search.data):
-            return redirect(url_for('post.subreddit_route', subreddit=form.search.data))
+            return redirect(url_for('post.subreddit_route_api', subreddit=form.search.data))
         else:
             flash("A subreddit with the name " + "'" +
                   form.search.data + "'" + " does not exist.", 'danger')
@@ -23,7 +23,7 @@ def search_for_user():
     form = SearchForUserForm()
     if form.validate_on_submit():
         if redditor_exists(form.search.data):
-            return redirect(url_for('user.user', username=form.search.data))
+            return redirect(url_for('user.user_api', username=form.search.data))
         else:
             flash("A redditor with the name " + "'" +
                   form.search.data + "'" + " does not exist.", 'danger')

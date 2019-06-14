@@ -35,16 +35,16 @@
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="{{ url_for('post.subreddit_route', subreddit='all') }}">All</a>
-                        <a class="dropdown-item" href="{{ url_for('post.subreddit_route', subreddit='popular') }}">Popular</a>
+                        <a class="dropdown-item" href="{{ url_for('post.subreddit_route_api', subreddit='all') }}">All</a>
+                        <a class="dropdown-item" href="{{ url_for('post.subreddit_route_api', subreddit='popular') }}">Popular</a>
                         
                         <hr>
 
                         <h6 class="dropdown-header">Relevant Subreddits</h6>
-                        <a class="dropdown-item" href="{{ url_for('post.subreddit_route', subreddit='python') }}">r/Python</a>
-                        <a class="dropdown-item" href="{{ url_for('post.subreddit_route', subreddit='dankmemes') }}">r/DankMemes</a>
-                        <a class="dropdown-item" href="{{ url_for('post.subreddit_route', subreddit='4chan') }}">r/4chan</a>
-                        <a class="dropdown-item" href="{{ url_for('post.subreddit_route', subreddit='dota2') }}">r/DotA2</a>
+                        <a class="dropdown-item" href="{{ url_for('post.subreddit_route_api', subreddit='python') }}">r/Python</a>
+                        <a class="dropdown-item" href="{{ url_for('post.subreddit_route_api', subreddit='dankmemes') }}">r/DankMemes</a>
+                        <a class="dropdown-item" href="{{ url_for('post.subreddit_route_api', subreddit='4chan') }}">r/4chan</a>
+                        <a class="dropdown-item" href="{{ url_for('post.subreddit_route_api', subreddit='dota2') }}">r/DotA2</a>
                     </div>
                 </div>
 
