@@ -1,5 +1,5 @@
-from reddit import reddit
 from reddit.reddit_api import subreddit_request
+from reddit import reddit
 from reddit.utility import get_submission_comments
 from flask import render_template, Blueprint
 

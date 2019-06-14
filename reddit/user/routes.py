@@ -1,5 +1,5 @@
-from reddit import reddit
 from reddit.reddit_api import user_history, user_request, convert_time
+from reddit import reddit
 from reddit.utility import format_img_link, get_redditor_comments
 from flask import render_template, Blueprint
 

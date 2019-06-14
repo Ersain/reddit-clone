@@ -2,13 +2,12 @@ from flask import Flask
 import praw
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '9cf59f956022a026f61b7ba347ae824d'
+app.config['SECRET_KEY'] = '23b005f15663039761bc'
 
-reddit = praw.Reddit(client_id='LHmmSkweyzSiAA', \
-                     client_secret='Zs2_1an3ELAMSKaB-ewFpkr8TjQ', \
-                     user_agent='Praw project for uni v1.0 by /u/praw_test123', \
-                     username='praw_test123')
-                     #password='pr4wT3st')
+reddit = praw.Reddit(client_id='29kEC9wIc7F3ww', \
+                     client_secret='vdRcAJ_ZuuO3YyceKpMBOKV88EI', \
+                     user_agent='Reddit Api usage', \
+                     username='mag1skboy')
 
 # from redditApp import routes
 

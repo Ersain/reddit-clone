@@ -1,5 +1,5 @@
-from reddit import reddit
 from reddit.utility import sub_exists, redditor_exists
+from reddit import reddit
 from reddit.search.forms import SearchForSubredditForm, SearchForUserForm
 from flask import flash, request, redirect, render_template, url_for, Blueprint
 
