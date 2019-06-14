@@ -25,3 +25,4 @@ def post(post_id):
     post = reddit.submission(id=post_id)
     comments = get_submission_comments(post, 10)
     return render_template('post.html', post=post, comments=comments)
+
