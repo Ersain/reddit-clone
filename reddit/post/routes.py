@@ -10,8 +10,8 @@ post_bp = Blueprint('post', __name__)
 @post_bp.route("/")
 @post_bp.route('/home')
 def home():
-    posts = reddit.front.hot(limit=15)
-    return render_template("home.html", posts=posts)
+    posts = subreddit_request('all')
+    return render_template("home_api.html", posts=posts['data']['children'])
 
 
 @post_bp.route("/r/<string:subreddit>")
