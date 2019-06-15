@@ -16,22 +16,6 @@ def get_submission_comments(submission, n):
         i += 1
     return comments
 
-def is_valid_comment(comment):
-    if isinstance(comment, praw.models.MoreComments):
-        return False
-    if isinstance(comment, praw.models.comment_forest.CommentForest):
-        return False
-    return True
-
-def get_redditor_comments(redditor, n):
-    comments = []
-    i = 1
-    for comment in redditor.comments.new():
-        if i >= n:
-            break
-        comments.append(comment)
-        i += 1
-    return comments
 
 def sub_exists(sub):
     exists = True
@@ -48,8 +32,3 @@ def redditor_exists(name):
     except (NotFound, TypeError, BuildError):
         return False
     return True
-
-def format_img_link(link):
-    if '?' in link:
-        return link.split('?')[0]
-    return link
