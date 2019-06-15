@@ -28,3 +28,4 @@ websocket-client==0.56.0
 Werkzeug==0.15.4
 WTForms==2.2.1
 zipp==0.5.1
+coverage==4.5.3
