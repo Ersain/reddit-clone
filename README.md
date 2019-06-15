@@ -1,7 +1,17 @@
-# Reddit Clone :alien:
-![GitHub Logo](/test/coverage.svg)
+# Reddit Clone ![Alt text](/reddit/static/img/reddit.png)
+![Alt text](/test/coverage.svg)
+
 
 Simple Reddit clone made on [Flask](http://flask.pocoo.org/) using [Reddit API](https://www.reddit.com/dev/api/).
+
+## Prerequisites
+* Python
+* Flask
+* Pytest
+
+Optional:
+* [Coverage.py](https://coverage.readthedocs.io/en/v4.5.x/)
+* [Coverage-badge](https://pypi.org/project/coverage-badge/)
 
 ## Installation
 
@@ -95,8 +105,54 @@ Simply type this to stop:
 $ docker container stop <CONTAINER ID>
 ```
 
+## Running the tests
+Go to the folder "tests" and type the following:
+```sh
+$ pytest test_<name>.py
+```
+Optional:
+```sh
+$ pytest test_<name>.py -v -s
+```
 
+Checking test coverage with coverage.py:
+```sh
+$ coverage run test_<name>.py
+$ coverage report
+```
+In the output you should see something like this:
+```sh
+Name                                                                 Stmts   Miss  Cover
+----------------------------------------------------------------------------------------
+Absolute path                                                           11      0   100%
+Absolute path                                                           16      0   100%
+Absolute path                                                            8      0   100%
+----------------------------------------------------------------------------------------
+TOTAL                                                                   35      0   100%
+```
+## Optional
+In order to save the report of the coverage test:
+```sh
+$ coverage html
+```
 
+In order to create a badge of covered tests, first install coverage-badge using pip:
+```sh
+$ pip install coverage-badge
+```
+After you installed the package, run coverage.py to generate the necessary coverage data.
+```sh
+$ coverage run test_<name>.py
+$ coverage report
+```
+Then you can either return the badge SVG to stdout:
+```sh
+$ coverage-badge
+```
+…or write it to a file:
+```sh
+$ coverage-badge -o coverage.svg
+```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
