@@ -1,4 +1,4 @@
-# Reddit Clone
+# Reddit Clone :alien:
 ![GitHub Logo](/test/coverage.svg)
 
 Simple Reddit clone made on [Flask](http://flask.pocoo.org/) using [Reddit API](https://www.reddit.com/dev/api/).
