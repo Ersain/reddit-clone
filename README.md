@@ -49,6 +49,8 @@ Make sure that you are doing it in virtual environment:
 (venv)
 $ pip install -r requirements.txt
 ```
+
+## Usage 
 Simply type to run the app:
 ```sh
 (venv)
