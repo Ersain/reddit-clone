@@ -8,10 +8,13 @@ Simple Reddit clone made on [Flask](http://flask.pocoo.org/) using [Reddit API](
 * Python
 * Flask
 * Pytest
+* Requests
 
 Optional:
 * [Coverage.py](https://coverage.readthedocs.io/en/v4.5.x/)
 * [Coverage-badge](https://pypi.org/project/coverage-badge/)
+
+_Note: I did not manage to implement authorization_
 
 ## Installation
 
@@ -32,17 +35,21 @@ $ source venv/bin/activate
 ```
 For Windows Command Line:
 ```
->venv\Scripts\activate
+C:\Your\Path\Here>venv\Scripts\activate
 or
->venv\Scripts\activate.bat
+C:\Your\Path\Here>venv\Scripts\activate.bat
 ```
 
-Next install requirements for the project and make sure that you are doing it in virtual environment:
+Next install requirements for the project via [pip](https://pip.pypa.io/en/stable/installing/).
+<br>
+Make sure that you are doing it in virtual environment:
 ```sh
+(venv)
 $ pip install -r requirements.txt
 ```
 Simply type to run the app:
 ```sh
+(venv)
 $ python run.py
 ```
 After that you should see something like:
@@ -80,12 +87,16 @@ Verify the deployment by navigating to your server address in your preferred bro
 http://0.0.0.0:80/
 ```
 
-
-If you are troubling to connect the server try this:
+If you are troubling to connect the server you should use the Docker Machine IP instead of localhost. <br>
+E.g.:
 ```sh
 http://192.168.99.100:4000
 ```
 
+To find the IP address type this:
+```sh
+$ docker-machine ip
+```
 
 For windows users:
 If you want to close the app, CTRL+C is not enough
@@ -98,7 +109,7 @@ Result:
 ```sh
 $ docker container ls
 CONTAINER ID        IMAGE                        COMMAND             CREATED             STATUS              PORTS                  NAMES
-29180bb6ba2f        ersain666/reddit-clone:1.0   "python run.py"     2 minutes ago       Up About a minute   0.0.0.0:4000->80/tcp   nostalgic_goodall
+<ID_EXAMPLE>        ersain666/reddit-clone:1.0   "python run.py"     2 minutes ago       Up About a minute   0.0.0.0:4000->80/tcp   nostalgic_goodall
 ```
 Simply type this to stop:
 ```sh
@@ -124,9 +135,9 @@ In the output you should see something like this:
 ```sh
 Name                                                                 Stmts   Miss  Cover
 ----------------------------------------------------------------------------------------
-Absolute path                                                           11      0   100%
-Absolute path                                                           16      0   100%
-Absolute path                                                            8      0   100%
+Absolute path example 1                                                 11      0   100%
+Absolute path example 2                                                 16      0   100%
+Absolute path example 3                                                  8      0   100%
 ----------------------------------------------------------------------------------------
 TOTAL                                                                   35      0   100%
 ```
