@@ -1,4 +1,5 @@
-# Reddit Clone ![Alt text](/reddit/static/img/reddit.png)
+![Alt text](/reddit/static/img/reddit.png)
+# Reddit Clone 
 ![Alt text](/test/coverage.svg)
 
 
