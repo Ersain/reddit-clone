@@ -14,7 +14,8 @@ Optional:
 * [Coverage.py](https://coverage.readthedocs.io/en/v4.5.x/)
 * [Coverage-badge](https://pypi.org/project/coverage-badge/)
 
-_Note: I did not manage to implement authorization_
+_Note: I did not manage to implement authorization._
+_I used PRAW (wrapper) for searching._
 
 ## Installation
 
@@ -22,7 +23,7 @@ Simply clone the repository or download zip:
 ```sh
 $ git clone git@github.com:MagiskBoy/RedditClone.git
 ```
-After download, setup your virtual environment (I used Python venv)
+After download, setup your virtual environment (I used Python venv).
 <br>
 Go to the folder with the project and type the following in your terminal:
 ```sh
