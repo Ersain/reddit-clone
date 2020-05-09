@@ -175,4 +175,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## Authors
-* [Ersain Dynmukhamed](https://github.com/MagiskBoy)
+* [Ersain Dynmukhamed](https://github.com/Ersain)
